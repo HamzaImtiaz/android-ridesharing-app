@@ -1,0 +1,85 @@
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.talalrashid.ride.MainActivity"
+            android:fitsSystemWindows="true">
+
+
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="0dip"
+                    android:layout_height="0dip"
+                    android:id="@+id/dummyView"
+                    android:orientation="horizontal"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/searchTxt"
+                    android:layout_width="700dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:imeOptions="flagNoExtractUi"
+                    android:textColor="#5e5e5e"
+                    android:hint="Search rides"
+                    android:background="#ffffff"
+                    android:singleLine="true"
+                    android:drawableLeft="@drawable/tiny"/>
+
+                <Button
+                    android:id="@+id/searchBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:background="@drawable/search2"
+                    android:onClick="searchRides"
+                    />
+
+            </FrameLayout>
+            <!--<Button
+                android:id="@+id/searchBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search for Ride"
+                android:width="500dp"
+                android:background="#ffffff"
+                android:textColor="#b7b7b7"
+                android:drawableRight="@drawable/search"
+                android:drawableLeft="@drawable/tiny"
+                android:onClick="searchRides"
+                android:layout_marginTop="432dp"
+                />-->
+            <Button
+                android:id="@+id/buttonPrompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_location"
+                android:width="500dp"
+                android:layout_marginTop="480dp"
+                android:background="@color/colorPrimary"
+                android:textColor="#ffffff"
+                />
+
+        </fragment>
+    </LinearLayout>
+</LinearLayout>

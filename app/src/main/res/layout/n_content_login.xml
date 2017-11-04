@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/doodle"
+
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="80dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.talalrashid.ride.Login"
+    tools:showIn="@layout/activity_login">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="l134132@lhr.nu.edu.pk"
+                android:id="@+id/userID"
+                android:hint="Username"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:text="123456"
+                android:id="@+id/passID"
+                android:hint="Password"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/loginBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:layout_weight="1.51"
+                    android:width="200dp"
+                    android:onClick="LoginAccount"
+                    android:text="Login"
+                    android:background="@drawable/button_bg_transparent"
+                    />
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="107dp"
+                android:layout_marginTop="20dp"
+                android:text="Don't have an account?" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="113dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1.95"
+                android:nestedScrollingEnabled="true"
+                android:onClick="SignUp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Register Now"
+                android:background="@drawable/button_bg_transparent"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
