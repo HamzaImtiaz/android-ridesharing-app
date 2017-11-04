@@ -20,10 +20,6 @@ import java.net.URLEncoder;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/**
- * Created by Hamza Imtiaz on 10/26/2017.
- */
-
 public class BookingRideController extends AsyncTask<String, Void, String> {
 
     Context context;
