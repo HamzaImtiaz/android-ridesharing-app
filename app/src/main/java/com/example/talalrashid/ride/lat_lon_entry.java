@@ -46,11 +46,16 @@ public class lat_lon_entry extends AsyncTask<List<LatLng>, Void, String> {
         sharedPref=context.getSharedPreferences(MyPREF,Context.MODE_PRIVATE);
         ip=sharedPref.getString("ip","");
         String ride_book_uri=ip+"lat_long_entry.php";
-
+        LatLng temp_locations=null;
+        String latitude=null,longitude=null;
         for(int i=0;i<params[0].size();i++)
         {
-            all_lat_long.append(params[0].get(i).toString());
+           // all_lat_long.append(pms[0].get(i).toString());
+           all_lat_long.append(Double.toString(params[0].get(i).latitude)) ;
             all_lat_long.append(",");
+            all_lat_long.append(Double.toString(params[0].get(i).longitude)) ;
+            all_lat_long.append(",");
+
         }
        String all_lat_long_1=all_lat_long.toString();
         String entry= Integer.toString(entries);
@@ -64,8 +69,8 @@ public class lat_lon_entry extends AsyncTask<List<LatLng>, Void, String> {
             connect.setDoInput(true);
             OutputStream os = connect.getOutputStream();
             BufferedWriter bff = new BufferedWriter(new OutputStreamWriter(os));
-            String source_points=origin.toString();
-            String dest_points=dest.toString();
+            String source_points=Double.toString(origin.latitude)+","+Double.toString(origin.longitude);
+            String dest_points=Double.toString(dest.latitude)+","+Double.toString(dest.longitude);
 
             String post_data =
                     URLEncoder.encode("entries", "UTF-8") + "=" + URLEncoder.encode(entry, "UTF-8") + "&" + URLEncoder.encode("lat_long", "UTF-8") + "=" + URLEncoder.encode(all_lat_long_1, "UTF-8")

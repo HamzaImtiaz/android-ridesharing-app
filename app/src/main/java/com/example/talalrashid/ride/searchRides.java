@@ -167,8 +167,13 @@ public class searchRides extends AppCompatActivity {
                         entry_no = jo.getString("entry_no");
                         destination_points = jo.getString("dest_point");
                         g = new Geocoder(getBaseContext(), Locale.getDefault());
-                        ssearch_address_list = g.getFromLocationName(searched_place, 1);
+                        try {
+                            search_address_list = g.getFromLocationName(searched_place, 1);
+                        }
+                        catch (Exception e)
+                        {
 
+                        }
                         search_address = search_address_list.get(0);
 
                         double search_Lat = search_address.getLatitude();
@@ -180,7 +185,7 @@ public class searchRides extends AppCompatActivity {
                             allRides.add(currRide);
 
                         }
-                        else if()
+                        //else if()
                         count++;
                     }
 

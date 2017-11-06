@@ -40,7 +40,7 @@ public class SplashScreen extends Activity {
 
             SharedPreferences.Editor editor = sharedPref.edit();
 
-            editor.putString("ip", "http://192.168.0.108/Ride/");
+            editor.putString("ip", "http://192.168.15.126/Ride/");
             editor.commit();
             sharedPref = getSharedPreferences(MyPREF, Context.MODE_PRIVATE);
             for (int i = 11; i <= 20; i++) {
